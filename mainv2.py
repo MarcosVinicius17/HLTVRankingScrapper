@@ -1,6 +1,4 @@
 import requests
-from PIL import Image
-from io import BytesIO
 from bs4 import BeautifulSoup
 import cloudscraper
 import re
@@ -79,19 +77,6 @@ else:
                 teamLogoUrl = image['src']
                 #I only need one URL.
                 break
-
-    #Now, lets save the image
-   #logoUrl = requests.get(teamLogoUrl)
-    
-
-    #print("Getting image from")
-    #print(teamLogoUrl)
-    
-    #Looks like the link is from a .svg file. But when i try to access,
-    #it returns me a 503, meaning Service Unavailable.
-    #Guess this is it. 
-    
-    #image = Image.open(BytesIO(logoUrl.content))
 
 
 
